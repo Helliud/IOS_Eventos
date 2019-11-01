@@ -15,6 +15,8 @@
 		BE2039BA236CC92600CBD096 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BE2039B8236CC92600CBD096 /* LaunchScreen.storyboard */; };
 		BE2039C5236CC92700CBD096 /* eventosTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2039C4236CC92700CBD096 /* eventosTests.swift */; };
 		BE2039D0236CC92700CBD096 /* eventosUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2039CF236CC92700CBD096 /* eventosUITests.swift */; };
+		BE2039E3236CCCE600CBD096 /* celdaEventoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2039E2236CCCE600CBD096 /* celdaEventoController.swift */; };
+		BE2039E6236CCE6100CBD096 /* modeloEvento.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE2039E5236CCE6100CBD096 /* modeloEvento.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		BE2039CB236CC92700CBD096 /* eventosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = eventosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE2039CF236CC92700CBD096 /* eventosUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = eventosUITests.swift; sourceTree = "<group>"; };
 		BE2039D1236CC92700CBD096 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BE2039E2236CCCE600CBD096 /* celdaEventoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = celdaEventoController.swift; sourceTree = "<group>"; };
+		BE2039E5236CCE6100CBD096 /* modeloEvento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = modeloEvento.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +103,11 @@
 		BE2039AC236CC92500CBD096 /* eventos */ = {
 			isa = PBXGroup;
 			children = (
-				BE2039AD236CC92500CBD096 /* AppDelegate.swift */,
-				BE2039AF236CC92500CBD096 /* SceneDelegate.swift */,
-				BE2039B1236CC92500CBD096 /* ViewController.swift */,
-				BE2039B3236CC92500CBD096 /* Main.storyboard */,
-				BE2039B6236CC92600CBD096 /* Assets.xcassets */,
-				BE2039B8236CC92600CBD096 /* LaunchScreen.storyboard */,
-				BE2039BB236CC92600CBD096 /* Info.plist */,
+				BE2039E1236CCA1300CBD096 /* Resources */,
+				BE2039E0236CCA0700CBD096 /* App */,
+				BE2039DF236CC9F700CBD096 /* Storyboards */,
+				BE2039DE236CC9EE00CBD096 /* Modelos */,
+				BE2039DD236CC9DF00CBD096 /* ViewControllers */,
 			);
 			path = eventos;
 			sourceTree = "<group>";
@@ -126,6 +128,50 @@
 				BE2039D1236CC92700CBD096 /* Info.plist */,
 			);
 			path = eventosUITests;
+			sourceTree = "<group>";
+		};
+		BE2039DD236CC9DF00CBD096 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BE2039AF236CC92500CBD096 /* SceneDelegate.swift */,
+				BE2039B1236CC92500CBD096 /* ViewController.swift */,
+				BE2039BB236CC92600CBD096 /* Info.plist */,
+				BE2039E2236CCCE600CBD096 /* celdaEventoController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BE2039DE236CC9EE00CBD096 /* Modelos */ = {
+			isa = PBXGroup;
+			children = (
+				BE2039E5236CCE6100CBD096 /* modeloEvento.swift */,
+			);
+			path = Modelos;
+			sourceTree = "<group>";
+		};
+		BE2039DF236CC9F700CBD096 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BE2039B3236CC92500CBD096 /* Main.storyboard */,
+				BE2039B8236CC92600CBD096 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BE2039E0236CCA0700CBD096 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				BE2039AD236CC92500CBD096 /* AppDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		BE2039E1236CCA1300CBD096 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BE2039B6236CC92600CBD096 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +305,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE2039E3236CCCE600CBD096 /* celdaEventoController.swift in Sources */,
 				BE2039B2236CC92500CBD096 /* ViewController.swift in Sources */,
+				BE2039E6236CCE6100CBD096 /* modeloEvento.swift in Sources */,
 				BE2039AE236CC92500CBD096 /* AppDelegate.swift in Sources */,
 				BE2039B0236CC92500CBD096 /* SceneDelegate.swift in Sources */,
 			);
