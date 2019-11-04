@@ -22,4 +22,10 @@ class modeloEvento{
         self.fecha = fecha
         self.urlFlyer = urlFlyer
     }
+    
+    init(direccionar : NSDictionary){
+        self.nombre = "nombre"
+        self.fecha = "fecha"
+        self.urlFlyer = "urlFlyer"
+    }
 }
