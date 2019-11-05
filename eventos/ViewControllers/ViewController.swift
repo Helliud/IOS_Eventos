@@ -8,8 +8,11 @@
 
 import UIKit
 import Alamofire
+import AlamofireImage
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    @IBOutlet weak var tvEventos: UITableView!
     
     var eventos :   [modeloEvento] = []
     
@@ -25,6 +28,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let celda = tableView.dequeueReusableCell(withIdentifier: "celdaEvento") as? celdaEventoController
         celda?.lblNombreEvento.text = eventos[indexPath.row].nombre
         celda?.lblFecha.text = eventos[indexPath.row].fecha
+        celda?.lblTipoLugar.text = eventos[indexPath.row].tipoEvento
+        celda?.lblLugar.text = eventos[indexPath.row].lugar
+        
+        AF.request(eventos[indexPath.row].urlFlyer).responseImage{
+            response in
+            switch(response.result){
+            case.success(let data):
+                celda?.imgFlayer.image = data
+            case.failure(_):
+                print("Algo salio mal")
+            }
+        }
         
         return celda!
     }
@@ -42,6 +57,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                             self.eventos.append(nuevoEvento)
                         }
                     }
+                
+                self.tvEventos.reloadData()
                 }
                 
             case.failure(_) : print("Algo malio sal")
@@ -51,7 +68,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 163
+    }
 
 
 }
